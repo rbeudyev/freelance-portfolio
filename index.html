@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Développeur Web & Mobile Freelance - Sites web performants et applications sur-mesure pour freelances et PME"
+    />
+    <meta
+      name="keywords"
+      content="développeur web, freelance, mobile, react, javascript, tailwind, liquid glass"
+    />
+    <meta name="author" content="Votre Nom" />
+    <meta property="og:title" content="Portfolio Freelance - Développeur Web & Mobile" />
+    <meta property="og:description" content="Développeur Web & Mobile Freelance - Sites web performants et applications sur-mesure" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://votreportfolio.com" />
+
+    <title>Portfolio Freelance - Développeur Web & Mobile</title>
+
+    <!-- Tailwind CSS -->
+    
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link href="dist/output.css" rel="stylesheet">
+
+  </head>
+  <body class="font-inter text-gray-100 bg-dark min-h-screen">
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 bg-gradient-to-br from-dark via-dark-light to-dark pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="font-grotesk fixed top-4 left-1/2 transform -translate-x-1/2 w-auto bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 z-50 transition-all duration-300 shadow-2xl"
+    >
+      <div class="flex items-center space-x-8">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#home" class="text-xl font-bold text-white hover:text-primary transition-colors duration-300">
+            Portfolio
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a
+            href="#home"
+            class="nav-link text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20"
+            >Accueil</a
+          >
+          <a
+            href="#services"
+            class="nav-link text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20"
+            >Projets</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20"
+            >À propos</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-btn"
+            class="text-gray-300 hover:text-white focus:outline-none focus:text-white bg-white/10 backdrop-blur-sm p-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+          >
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden absolute top-full left-0 right-0 mt-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl"
+      >
+        <div class="p-4 space-y-2">
+          <a
+            href="#home"
+            class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20"
+            >Accueil</a
+          >
+          <a
+            href="#services"
+            class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20"
+            >Projets</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20"
+            >À propos</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/15 hover:border-white/20"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-20 pb-16 relative"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Contenu texte -->
+          <div class="text-center lg:text-left space-y-8">
+            <div class="animate-fade-in space-y-6">
+              <!-- Badge de statut -->
+              <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-primary rounded-full text-sm font-medium border border-white/20">
+                <i class="fas fa-circle text-xs mr-2 animate-pulse"></i>
+                Disponible pour de nouveaux projets
+              </div>
+              
+              <!-- Titre principal -->
+              <h1 class="font-grotesk text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Développeur Web & Mobile 
+                <span class="text-primary block">Freelance</span>
+              </h1>
+              
+              <!-- Sous-titre -->
+              <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Je crée des sites et applications modernes, rapides et adaptés à vos besoins.
+              </p>
+              
+              <!-- Boutons CTA -->
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="#projects"
+                  class="font-grotesk inline-flex items-center justify-center px-8 py-4 bg-primary/20 backdrop-blur-sm text-primary border border-primary/30 rounded-xl font-semibold hover:bg-primary/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-primary/25"
+                >
+                  <i class="fas fa-eye mr-2"></i>
+                  Voir mes projets
+                </a>
+                <a
+                  href="#contact"
+                  class="font-grotesk inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+                >
+                  <i class="fas fa-envelope mr-2"></i>
+                  Contactez-moi
+                </a>
+              </div>
+              
+              <!-- Statistiques rapides -->
+              <div class="flex flex-wrap justify-center lg:justify-start gap-8 pt-4">
+                <div class="text-center bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                  <div class="text-2xl font-grotesk font-bold text-white">20+</div>
+                  <div class="text-sm text-gray-300">Projets réalisés</div>
+                </div>
+                <div class="text-center bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                  <div class="text-2xl font-grotesk font-bold text-white">2+</div>
+                  <div class="text-sm text-gray-300">Années d'expérience</div>
+                </div>
+                <div class="text-center bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                  <div class="text-2xl font-grotesk font-bold text-white">100%</div>
+                  <div class="text-sm text-gray-300">Satisfaction client</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Image/Illustration -->
+          <div class="hidden lg:block animate-slide-in-right">
+            <div class="relative">
+              <!-- Placeholder pour image professionnelle avec liquid glass -->
+              <div class="w-full h-96 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center shadow-xl">
+                <div class="text-center space-y-4">
+                  <div class="w-24 h-24 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto border border-primary/30 animate-float">
+                    <i class="fas fa-code text-3xl text-primary"></i>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="h-4 bg-white/20 rounded w-3/4 mx-auto backdrop-blur-sm"></div>
+                    <div class="h-4 bg-white/20 rounded w-1/2 mx-auto backdrop-blur-sm"></div>
+                    <div class="h-4 bg-white/20 rounded w-2/3 mx-auto backdrop-blur-sm"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Éléments décoratifs -->
+              <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-float"></div>
+              <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 animate-float" style="animation-delay: 1s;"></div>
+              <div class="absolute top-1/2 -left-8 w-4 h-4 bg-primary/30 backdrop-blur-sm rounded-full border border-primary/40 animate-float" style="animation-delay: 2s;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            Mes Services
+          </h2>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Des solutions web complètes adaptées à vos besoins
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div class="service-card group bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="bg-primary/20 backdrop-blur-sm p-6 rounded-xl mb-4 group-hover:bg-primary/30 transition-all duration-300 border border-primary/30">
+              <i class="fas fa-globe text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3">
+              Sites vitrines sur mesure
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+              Sites web professionnels et responsive pour présenter votre
+              activité et attirer de nouveaux clients.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card group bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="bg-primary/20 backdrop-blur-sm p-6 rounded-xl mb-4 group-hover:bg-primary/30 transition-all duration-300 border border-primary/30">
+              <i class="fas fa-rocket text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3">
+              Landing Page
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+				Transformez vos visiteurs en clients avec une landing page impactante
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card group bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="bg-primary/20 backdrop-blur-sm p-6 rounded-xl mb-4 group-hover:bg-primary/30 transition-all duration-300 border border-primary/30">
+              <i class="fas fa-mobile-alt text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3">
+              Refonte et modénisation de votre site
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+				Un site web dépassé fait fuir vos clients.
+				Offrez à votre image une seconde jeunesse, avec un design moderne, rapide et responsive.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card group bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="bg-primary/20 backdrop-blur-sm p-6 rounded-xl mb-4 group-hover:bg-primary/30 transition-all duration-300 border border-primary/30">
+              <i class="fas fa-tools text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3">
+              Maintenance
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+              Maintenance préventive, mises à jour et optimisations pour
+              garantir la performance de vos sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            Mes Projets
+          </h2>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Découvrez quelques-uns de mes derniers projets
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="h-48 bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center border-b border-white/20">
+              <img src="assets/img.png">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+				  Portfolio pour un ingénieur en automatisme en freelance.
+              </h3>
+              <p class="text-gray-300 mb-4">
+				  Création d’un site sobre, clair et structuré pour valoriser l’expertise
+				  d’un freelance en automatisme. L’objectif : rassurer les entreprises industrielles,
+				  présenter les services et permettre une prise de contact rapide.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary/20 backdrop-blur-sm text-primary text-sm rounded-full border border-primary/30">
+                  Html
+                </span>
+                <span class="px-3 py-1 bg-primary/20 backdrop-blur-sm text-primary text-sm rounded-full border border-primary/30">
+                  Tailwind CSS
+                </span>
+                <span class="px-3 py-1 bg-primary/20 backdrop-blur-sm text-primary text-sm rounded-full border border-primary/30">
+                  JavaScript
+                </span>
+              </div>
+              <a href="https://gga-automatisme.web.app/" class="text-primary font-semibold hover:underline">
+                Voir le projet →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="h-48 bg-gradient-to-br from-green-400/20 to-green-600/40 flex items-center justify-center border-b border-white/20">
+              <img src="assets/img_1.png">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Portfolio pour une décoratrice d'intérieur  (en cours)
+              </h3>
+              <p class="text-gray-300 mb-4">
+				  Conception d’un portfolio visuel pour une décoratrice freelance.
+				  Le site met en valeur les réalisations, le style et la personnalité de la cliente,
+				  tout en facilitant la prise de rendez-vous.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-green-400/20 backdrop-blur-sm text-green-400 text-sm rounded-full border border-green-400/30">
+                  Html
+                </span>
+                <span class="px-3 py-1 bg-green-400/20 backdrop-blur-sm text-green-400 text-sm rounded-full border border-green-400/30">
+                  CSS
+                </span>
+                <span class="px-3 py-1 bg-green-400/20 backdrop-blur-sm text-green-400 text-sm rounded-full border border-green-400/30">
+                  JavaScript
+                </span>
+              </div>
+              <a href="#" class="text-green-400 font-semibold hover:underline">
+                Voir le projet →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/10">
+            <div class="h-48 bg-gradient-to-br from-purple-400/20 to-purple-600/40 flex items-center justify-center border-b border-white/20">
+				<img src="assets/img_2.png">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+				  Un site e-commerce rapide à déployer pour tester un concept produit (en cours)
+              </h3>
+              <p class="text-gray-300 mb-4">
+				  Développement d’un site e-commerce avec une interface simple et
+				  des fonctionnalités essentielles. Parfait pour les indépendants souhaitant
+				  lancer une boutique rapidement.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-purple-400/20 backdrop-blur-sm text-purple-400 text-sm rounded-full border border-purple-400/30">
+                  React Native
+                </span>
+                <span class="px-3 py-1 bg-purple-400/20 backdrop-blur-sm text-purple-400 text-sm rounded-full border border-purple-400/30">
+                  Expo
+                </span>
+                <span class="px-3 py-1 bg-purple-400/20 backdrop-blur-sm text-purple-400 text-sm rounded-full border border-purple-400/30">
+                  Supabase
+                </span>
+              </div>
+              <a href="#" class="text-purple-400 font-semibold hover:underline">
+                Voir le projet →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-slide-in-left bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+              À propos de moi
+            </h2>
+            <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+              Passionné de développement web depuis plus de 5 ans, je combine
+              créativité et expertise technique pour créer des solutions
+              digitales innovantes. Mon approche centrée sur l'utilisateur
+              garantit des interfaces intuitives et des expériences mémorables.
+            </p>
+            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+              Spécialisé dans les technologies modernes, je travaille avec des
+              frameworks performants pour développer des applications web et
+              mobiles qui répondent aux besoins spécifiques de mes clients.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">HTML5 & CSS3</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">JavaScript ES6+</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">React & Vue.js</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">Tailwind CSS</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">Node.js</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-gray-300">React Native</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="animate-slide-in-right">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+              <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full mx-auto mb-6 flex items-center justify-center border border-white/20">
+                <i class="fas fa-user text-4xl text-primary"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-2">
+                Timothé Gace
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Développeur Web & Mobile Freelance
+              </p>
+              <div class="flex justify-center space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/timoth%C3%A9-bordan-48b422337/"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10 hover:bg-white/10"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a
+                  href="https://github.com/rbeudyev"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10 hover:bg-white/10"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            Travaillons ensemble
+          </h2>
+          <p class="text-xl text-gray-300">
+            Prêt à concrétiser votre projet ? Contactez-moi pour en discuter !
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="animate-slide-in-left bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <h3 class="text-2xl font-semibold text-white mb-6">
+              Informations de contact
+            </h3>
+
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4 bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+                <div class="bg-primary/20 backdrop-blur-sm p-3 rounded-lg border border-primary/30">
+                  <i class="fas fa-envelope text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Email</p>
+                  <p class="text-white font-medium">
+                    t.gacebordan@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4 bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+                <div class="bg-primary/20 backdrop-blur-sm p-3 rounded-lg border border-primary/30">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Localisation</p>
+                  <p class="text-white font-medium">
+                    France (Remote possible)
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4 bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+                <div class="bg-primary/20 backdrop-blur-sm p-3 rounded-lg border border-primary/30">
+                  <i class="fas fa-clock text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Disponibilité</p>
+                  <p class="text-white font-medium">Réponse sous 24h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="text-lg font-semibold text-white mb-4">
+                Suivez-moi
+              </h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-primary/20 backdrop-blur-sm text-primary p-3 rounded-lg hover:bg-primary/30 transition-colors duration-200 border border-primary/30"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-800/20 backdrop-blur-sm text-gray-300 p-3 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 border border-gray-800/30"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="animate-slide-in-right bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <form  action="https://formspree.io/f/xblkpryp" method="post" id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nom complet *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 placeholder-gray-400 text-white"placeholder="Votre nom complet"/>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 placeholder-gray-400 text-white" placeholder="votre@email.com"/>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none placeholder-gray-400 text-white" placeholder="Décrivez votre projet..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-primary/20 backdrop-blur-sm text-primary border border-primary/30 py-3 px-6 rounded-lg font-semibold hover:bg-primary/30 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-2xl font-bold text-primary mb-4">Portfolio</h3>
+              <p class="text-gray-300 leading-relaxed">
+                Développeur web freelance passionné par la création d'expériences
+                digitales exceptionnelles.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4 text-white">Liens rapides</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-300 hover:text-white transition-colors duration-200"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-300 hover:text-white transition-colors duration-200"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="text-gray-300 hover:text-white transition-colors duration-200"
+                    >Projets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-300 hover:text-white transition-colors duration-200"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-semibold mb-4 text-white">Réseaux sociaux</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10 hover:bg-white/10"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 bg-white/5 backdrop-blur-sm p-3 rounded-lg border border-white/10 hover:bg-white/10"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-white/20 mt-8 pt-8 text-center">
+            <p class="text-gray-400">
+              © 2024 Portfolio Freelance. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full shadow-lg hover:bg-white/20 transition-all duration-300 opacity-0 invisible border border-white/20"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
