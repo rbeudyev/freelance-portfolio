@@ -19,7 +19,7 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
-  --max-width: 1200px;
+  --max-width: 1300px;
   --container-padding: 2rem;
 }
 
@@ -128,7 +128,6 @@ li{
 .hero {
   padding-top: 90px; /* space for fixed nav */
   min-height: calc(100vh - 90px);
-  display:flex;
   align-items:center;
   width:100%;
   box-sizing:border-box;
@@ -136,7 +135,7 @@ li{
 
 .hero-container {
   max-width: var(--max-width);
-  margin: 0 auto;
+
   padding: 3.5rem var(--container-padding);
 }
 
@@ -148,7 +147,7 @@ li{
 }
 
 /* Text column */
-.hero-text { max-width: 720px; }
+.hero-text { max-width: 1200px; }
 
 .status-badge{
   display:inline-flex;
@@ -750,7 +749,7 @@ li{
   }
   
   .hero-image { 
-    order: -1;
+    order: 1;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -769,6 +768,7 @@ li{
   }
   
   .stats-container {
+    display: flex;
     justify-content: center;
     gap: 1rem;
   }
@@ -868,7 +868,6 @@ li{
   
   /* Stats */
   .stats-container {
-    flex-direction: column;
     gap: 0.8rem;
   }
   
